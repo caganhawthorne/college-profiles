@@ -16,16 +16,21 @@ class College: NSObject {
     var image = UIImage(named: "Default")
     var web = "http://google.com"
     
+    var address = ""
+    
+    
     convenience init(name: String, location: String, enrollment: Int, image: UIImage) {
         self.init()
         self.name = name
         self.enrollment = enrollment
         self.location = location
         self.image = image
+        address = name+", "+location
     }
     convenience init(name: String) {
         self.init()
         self.name = name
+        address = name
     }
 
 

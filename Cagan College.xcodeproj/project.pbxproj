@@ -16,6 +16,7 @@
 		DA97D4831B4C425800528414 /* Cagan_CollegeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97D4821B4C425800528414 /* Cagan_CollegeUITests.swift */; };
 		DA97D4911B4C439300528414 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97D4901B4C439300528414 /* DetailViewController.swift */; };
 		DA97D4931B4C43AF00528414 /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97D4921B4C43AF00528414 /* College.swift */; };
+		EF5405B51B4DA7110069C5D4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5405B41B4DA7110069C5D4 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DA97D4841B4C425800528414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA97D4901B4C439300528414 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DA97D4921B4C43AF00528414 /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
+		EF5405B41B4DA7110069C5D4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				DA97D4621B4C425700528414 /* AppDelegate.swift */,
 				DA97D4641B4C425700528414 /* ViewController.swift */,
 				DA97D4661B4C425700528414 /* Main.storyboard */,
+				EF5405B41B4DA7110069C5D4 /* MapViewController.swift */,
 				DA97D4901B4C439300528414 /* DetailViewController.swift */,
 				DA97D4921B4C43AF00528414 /* College.swift */,
 				DA97D4691B4C425700528414 /* Assets.xcassets */,
@@ -194,7 +197,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Julianne Knott";
+				ORGANIZATIONNAME = "Cagan Hawthorne";
 				TargetAttributes = {
 					DA97D45E1B4C425700528414 = {
 						CreatedOnToolsVersion = 7.0;
@@ -264,6 +267,7 @@
 				DA97D4911B4C439300528414 /* DetailViewController.swift in Sources */,
 				DA97D4651B4C425700528414 /* ViewController.swift in Sources */,
 				DA97D4631B4C425700528414 /* AppDelegate.swift in Sources */,
+				EF5405B51B4DA7110069C5D4 /* MapViewController.swift in Sources */,
 				DA97D4931B4C43AF00528414 /* College.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Cagan College/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Julianne-Knott.Cagan-College";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Hawthorne.Cagan-College";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -419,7 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Cagan College/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Julianne-Knott.Cagan-College";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Hawthorne.Cagan-College";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -491,6 +495,7 @@
 				DA97D4891B4C425800528414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA97D48A1B4C425800528414 /* Build configuration list for PBXNativeTarget "Cagan CollegeTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +504,7 @@
 				DA97D48C1B4C425800528414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA97D48D1B4C425800528414 /* Build configuration list for PBXNativeTarget "Cagan CollegeUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +513,7 @@
 				DA97D48F1B4C425800528414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

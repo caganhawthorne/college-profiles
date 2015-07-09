@@ -61,7 +61,14 @@ class DetailViewController: UIViewController, UINavigationControllerDelegate, UI
         UIApplication.sharedApplication().openURL(NSURL(string: college.web)!)
     }
 
-    
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dvc = segue.destinationViewController as! MapViewController
+        let address = college.address
+        dvc.address = address
+        
+    }
+
     
     @IBAction func onTappedSaveButton(sender: UIButton) {
         college.name = nameTextField.text!

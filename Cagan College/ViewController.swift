@@ -12,7 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     var colleges: [College] = []
     
-    
+    let defaults = NSUserDefaults.standardUserDefaults()
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,15 +29,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         editButton.tag = 0
-        colleges.append(College(name: "Stanford", location: "Palo Alto", enrollment: 10000, image: UIImage(named:"Stanford")!))
+        colleges.append(College(name: "Stanford University", location: "Palo Alto", enrollment: 10000, image: UIImage(named:"Stanford")!))
         
-        colleges.append(College(name: "Northwestern", location: "Evanston", enrollment: 20000, image: UIImage(named: "NU")!))
+        colleges.append(College(name: "Northwestern University", location: "Evanston", enrollment: 20000, image: UIImage(named: "NU")!))
+        
         
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(colleges.count+"asdklfasdjfasjdf;lkajsdfl;kasdjf")
         return colleges.count
     }
     
@@ -51,6 +52,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             colleges.removeAtIndex(indexPath.row)
             tableView.reloadData()
         }
+        
+
     }
     
     @IBAction func onTappedPlusButton(sender: UIBarButtonItem) {
@@ -76,7 +79,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         alert.addAction(addAction)
         self.presentViewController(alert, animated: true, completion: nil)
-    }
+        
+            }
     
     func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
@@ -86,6 +90,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let college = colleges[sourceIndexPath.row]
         colleges.removeAtIndex(sourceIndexPath.row)
         colleges.insert(college, atIndex: destinationIndexPath.row)
+        
+
     }
     
     @IBAction func onTappedEditButtom(sender: UIBarButtonItem) {
@@ -97,13 +103,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             tableView.editing = false
             sender.tag = 0
         }
-        
+              
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let dvc = segue.destinationViewController as! DetailViewController
         let index = tableView.indexPathForSelectedRow?.row
         dvc.college = colleges[index!]
+        
     }
     
     
